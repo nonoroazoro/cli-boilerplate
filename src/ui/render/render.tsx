@@ -2,12 +2,8 @@ import { render } from "ink";
 
 import type { ComponentType } from "react";
 
-import type { CommandProps } from "../shared";
-
-interface RenderOptions
-{
-    interactive?: boolean;
-}
+import type { RenderOptions } from "./RenderOptions";
+import type { CommandProps } from "../../shared";
 
 /**
  * Renders a command view component with ink.
