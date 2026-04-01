@@ -1,9 +1,9 @@
 import { afterEach, describe, spyOn, test } from "bun:test";
 import { Text } from "ink";
 
-import { renderView } from "../../src/ui/render";
+import { renderView } from "../../../src/ui/render";
 
-import type { CommandProps } from "../../src/shared";
+import type { CommandProps } from "../../../src/shared";
 
 function TestView(props: CommandProps)
 {
