@@ -32,7 +32,6 @@
         "@types/react": "^19.2.14",
         "@typescript-eslint/eslint-plugin": "^8.58.0",
         "@typescript-eslint/parser": "^8.58.0",
-        "chalk": "^5.6.2",
         "dprint": "^0.53.1",
         "eslint": "^9.34.0",
         "eslint-config-zoro": "^9.1.3",
