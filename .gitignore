@@ -1,0 +1,18 @@
+# OS junk files
+.DS_Store
+
+# Environments
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+*.log*
+logs
+
+# Project
+node_modules
+*.bun-build
+coverage
+dist
