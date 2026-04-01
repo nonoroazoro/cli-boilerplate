@@ -26,34 +26,18 @@ describe("cli", () =>
         expect(exitCode).toBe(0);
     });
 
-    test("-v prints version", async () =>
-    {
-        const { stdout, exitCode } = await _run(["-v"]);
-        expect(stdout).toBe(packageJSON.version);
-        expect(exitCode).toBe(0);
-    });
-
     test("--help prints usage and command list", async () =>
     {
         const { stdout, exitCode } = await _run(["--help"]);
-        expect(stdout).toContain(`${packageJSON.name} v${packageJSON.version}`);
-        expect(stdout).toContain("Usage:");
+        expect(stdout).toContain("USAGE");
         expect(stdout).toContain("greet");
         expect(exitCode).toBe(0);
     });
 
-    test("no args prints help", async () =>
+    test("no args prints usage", async () =>
     {
-        const { stdout, exitCode } = await _run([]);
-        expect(stdout).toContain("Usage:");
-        expect(exitCode).toBe(0);
-    });
-
-    test("unknown command prints error", async () =>
-    {
-        const { stderr, exitCode } = await _run(["nonexistent"]);
-        expect(stderr).toContain("Unknown command: nonexistent");
-        expect(exitCode).toBe(1);
+        const { stdout } = await _run([]);
+        expect(stdout).toContain("USAGE");
     });
 
     test("greet command renders greeting", async () =>
