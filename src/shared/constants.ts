@@ -9,5 +9,5 @@ export const version = pkg?.version ?? VERSION;
 async function _loadPackageJSON(): Promise<{ name: string; version: string; }>
 {
     const file = Bun.file(new URL("../../package.json", import.meta.url));
-    return file.json();
+    return file.json() as Promise<{ name: string; version: string; }>;
 }

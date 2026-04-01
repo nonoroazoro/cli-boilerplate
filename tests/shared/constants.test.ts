@@ -1,8 +1,7 @@
 import { describe, expect, test } from "bun:test";
 
-import { name, version } from "../../src/shared/constants";
-
 import packageJSON from "../../package.json";
+import { name, version } from "../../src/shared/constants";
 
 describe("constants", () =>
 {

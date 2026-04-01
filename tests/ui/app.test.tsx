@@ -1,4 +1,4 @@
-import { afterEach, describe, expect, mock, spyOn, test } from "bun:test";
+import { afterEach, describe, expect, spyOn, test } from "bun:test";
 import { Text } from "ink";
 
 import { run } from "../../src/ui/app";
@@ -63,7 +63,7 @@ describe("run", () =>
             options: { name: { type: "string", short: "n" } }
         });
 
-        await expect(run(entry, ["--help"])).rejects.toThrow("process.exit");
+        expect(run(entry, ["--help"])).rejects.toThrow("process.exit");
         expect(exitSpy).toHaveBeenCalledWith(0);
         expect(logs.some(l => l.includes("Usage:"))).toBe(true);
         expect(logs.some(l => l.includes("--name"))).toBe(true);

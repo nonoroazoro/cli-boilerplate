@@ -24,9 +24,9 @@ async function _main(): Promise<void>
         console.log(`${name} v${version}\n`);
         console.log(`Usage: ${name} <command> [options]\n`);
         console.log("Commands:");
-        for (const command of getCommands())
+        for (const cmd of getCommands())
         {
-            console.log(`  ${command.name.padEnd(12)} ${command.description}`);
+            console.log(`  ${cmd.name.padEnd(12)} ${cmd.description}`);
         }
         console.log(`\nRun "${name} <command> --help" for command-specific help.`);
         process.exit(0);

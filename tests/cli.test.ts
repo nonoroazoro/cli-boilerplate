@@ -2,10 +2,10 @@ import { describe, expect, test } from "bun:test";
 
 import packageJSON from "../package.json";
 
-async function _run(args: string[]): Promise<{ stdout: string; stderr: string; exitCode: number; }>
+async function _run(args: string[]): Promise<{ exitCode: number; stderr: string; stdout: string; }>
 {
     const proc = Bun.spawn(["bun", "run", "src/cli.ts", ...args], {
-        cwd: import.meta.dir + "/..",
+        cwd: `${import.meta.dir}/..`,
         stdout: "pipe",
         stderr: "pipe"
     });
