@@ -2,7 +2,7 @@ import { Box, Text } from "ink";
 
 import type { ReactElement } from "react";
 
-import type { CommandProps } from "../../../shared";
+import type { CommandProps } from "../../shared";
 
 /**
  * Example command view: greet someone with style.

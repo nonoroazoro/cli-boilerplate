@@ -11,8 +11,8 @@ export const greet = defineCommand({
     },
     async run({ args })
     {
-        const { renderView } = await import("../../ui/render");
-        const { Greet } = await import("../../ui/views");
+        const { renderView } = await import("../../ui/render/render");
+        const { Greet } = await import("../../ui/views/Greet");
         await renderView(Greet, {
             flags: { name: args.name, loud: args.loud },
             positionals: []

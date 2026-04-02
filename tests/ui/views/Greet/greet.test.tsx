@@ -1,7 +1,7 @@
 import { describe, expect, test } from "bun:test";
 import { render } from "ink-testing-library";
 
-import { Greet } from "../../../../src/ui";
+import { Greet } from "../../../../src/ui/views/Greet";
 
 describe("greet", () =>
 {
